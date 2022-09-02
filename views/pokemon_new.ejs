@@ -7,13 +7,17 @@
   <body>
     <h1>New Pokemon Page</h1>
 
+    <button><a href="/pokemons">Return to Pokedex</a></button>
+
     <form class = "newPokemon" action="/pokemons" method="POST">
       
+      <ul>
         Name: <input type="text" name="name" placeholder="Pokemon's Name" required><br><br>
         ID: <input type="text" name="stats" placeholder="Pokemon's id Number" required><br><br>
         Type: <input type="text" name="type" placeholder="Pokemon's Type" required><br><br>
-        <button><a href="/pokemons">Return to Pokedex</a></button>
-      
+        <input type="submit" value="Add New Pokemon">
+
+      </ul>
     </form>
 
   </body>
