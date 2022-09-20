@@ -1,20 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="style.css" rel="stylesheet">
     <meta charset="UTF-8">
     <title>Pokemon Index</title>
 </head>
 <body>
     <h1>Pokemon Index Page</h1>
     <button><a href="/pokemons/new">Add New Pokemon</a></button>
+
+    <div class= "wrapper">
     
-
-    <div class = container>
         <% for(let i = 0; i < allPokemons.length; i++) { %>
-        <a id ="clickablePhotos" href="/pokemons/<%=i%>"><img border-radius="1" src="<%=allPokemons[i].img%>" width="100" height ="100">
+        <h4><%=allPokemons[i].name%></h4>
+        <a id ="clickablePhotos" href="/pokemons/<%=i%>"><img src="<%=allPokemons[i].img%>" width="100" height ="100">
         </a>
-        <% } %>
-    </div>
+        
 
+    <form action="/pokemons/<%=i; %>?_method=DELETE" method="POST">
+        <input type="submit" value="DELETE"/>
+    </form>
+    
+    
+    <% } %>
+</div>
 </body>
 </html>

@@ -7,12 +7,12 @@
   <body>
     <h1>Pokemon Edit Page</h1>
 
-    <form action="/pokemons/<%=index%>?_method=PUT" method="POST">
-      Name: <input type="text" name="name" value="<%=pokemon.name %>"><br><br>
-      Id: <input type="text" name="id" value="<%=pokemon.id %>"><br><br>        
-      HP: <input type="text" name="hp" value="<%=pokemon.stats.hp %>"><br><br>
-      Attack: <input type="text" name="attack" value="<%=pokemon.stats.attack %>"><br><br>
-      %>
+    <form action="/pokemons/<%=id%>_method=PUT" method="POST">
+      Name: <input type="text" name="name" value="<%=pokemon.name%>"/><br>
+      Id: <input type="text" name="id" value="<%=pokemon.id%>"><br><br>        
+      HP: <input type="text" name="hp" value="<%=pokemon.stats.hp%>"><br><br>
+      Attack: <input type="text" name="attack" value="<%=pokemon.stats.attack%>"><br><br>
+       %> 
         <br>
         <input type="submit" value="Submit Changes">
     </form>
